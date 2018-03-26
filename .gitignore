@@ -1,4 +1,6 @@
 .DS_Store
 objs
 *.o
+*.gch
 megaphone
+phonebook
