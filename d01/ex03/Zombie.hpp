@@ -1,25 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aridolfi <aridolfi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/03/27 15:30:31 by aridolfi          #+#    #+#             */
-/*   Updated: 2018/03/27 17:49:55 by aridolfi         ###   ########.fr       */
+/*   Created: 2018/03/27 15:25:47 by aridolfi          #+#    #+#             */
+/*   Updated: 2018/03/27 17:46:56 by aridolfi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <string>
-#include "Zombie.hpp"
+#ifndef ZOMBIE_HPP
+# define ZOMBIE_HPP
 
-Zombie::Zombie(std::string name, std::string type) : _name(name), _type(type) {}
+# include <string>
 
-Zombie::~Zombie() {}
+class Zombie {
 
-void	Zombie::announce() {
-	std::cout << "<" << this->_name << " (" << this->_type << \
-		")> Braiiiiiiinnnssss..." << \
-	std::endl;
-}
+public:
+
+	Zombie();
+	~Zombie();
+
+	void	announce();
+
+private:
+
+	std::string 		_name;
+	std::string			_type;
+
+};
+
+#endif

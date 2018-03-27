@@ -1,25 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   ZombieHorde.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aridolfi <aridolfi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/03/27 15:30:31 by aridolfi          #+#    #+#             */
-/*   Updated: 2018/03/27 17:49:55 by aridolfi         ###   ########.fr       */
+/*   Created: 2018/03/27 17:22:07 by aridolfi          #+#    #+#             */
+/*   Updated: 2018/03/27 17:38:43 by aridolfi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <string>
-#include "Zombie.hpp"
+#ifndef ZOMBIEHORDE_HPP
+# define ZOMBIEHORDE_HPP
 
-Zombie::Zombie(std::string name, std::string type) : _name(name), _type(type) {}
+# include "Zombie.hpp"
 
-Zombie::~Zombie() {}
+class ZombieHorde {
 
-void	Zombie::announce() {
-	std::cout << "<" << this->_name << " (" << this->_type << \
-		")> Braiiiiiiinnnssss..." << \
-	std::endl;
-}
+public:
+
+	ZombieHorde(int N);
+	~ZombieHorde();
+
+	void	announce();
+
+private:
+
+	size_t	_nZombie;
+	Zombie*	_hord;
+
+};
+
+#endif

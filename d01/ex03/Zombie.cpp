@@ -6,7 +6,7 @@
 /*   By: aridolfi <aridolfi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/27 15:30:31 by aridolfi          #+#    #+#             */
-/*   Updated: 2018/03/27 17:49:55 by aridolfi         ###   ########.fr       */
+/*   Updated: 2018/03/27 17:50:00 by aridolfi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,35 @@
 #include <string>
 #include "Zombie.hpp"
 
-Zombie::Zombie(std::string name, std::string type) : _name(name), _type(type) {}
+Zombie::Zombie() {
+	std::string	names[21] = {
+		"Kyle",
+		"Bob",
+		"Greg",
+		"Ana",
+		"Eva",
+		"Bruce"
+		"Fab",
+		"Anto",
+		"Math",
+		"Adri",
+		"Julia",
+		"Mike",
+		"Lola",
+		"Julie",
+		"Monica",
+		"Alex",
+		"Nico",
+		"Sarah",
+		"Hugo",
+		"Tom",
+		"Seb"
+	};
+
+	srand(time(NULL));
+	this->_name = names[rand() % 21];
+	this->_type = "Normal";
+}
 
 Zombie::~Zombie() {}
 

@@ -6,7 +6,7 @@
 /*   By: aridolfi <aridolfi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/27 15:25:47 by aridolfi          #+#    #+#             */
-/*   Updated: 2018/03/27 15:42:57 by aridolfi         ###   ########.fr       */
+/*   Updated: 2018/03/27 17:35:30 by aridolfi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ class Zombie {
 
 public:
 
-	Zombie(std::string name,std::string type);
+	Zombie(std::string name, std::string type);
 	~Zombie();
 
 	void	announce();
