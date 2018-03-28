@@ -6,7 +6,7 @@
 /*   By: aridolfi <aridolfi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/28 12:48:23 by aridolfi          #+#    #+#             */
-/*   Updated: 2018/03/28 15:40:47 by aridolfi         ###   ########.fr       */
+/*   Updated: 2018/03/28 16:02:29 by aridolfi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,9 +44,7 @@ Fixed &	Fixed::operator=(Fixed const & rhs) {
 
 	std::cout << "Assignation operator called" << std::endl;
 
-	if (this != &rhs) {
-		this->_val = rhs.getRawBits();
-	}
+	this->_val = rhs.getRawBits();
 
 	return *this;
 }
