@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aridolfi <aridolfi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/03/29 13:15:56 by aridolfi          #+#    #+#             */
-/*   Updated: 2018/03/29 16:28:27 by aridolfi         ###   ########.fr       */
+/*   Created: 2018/03/29 14:51:19 by aridolfi          #+#    #+#             */
+/*   Updated: 2018/03/29 15:56:29 by aridolfi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-# define SCAVTRAP_HPP
+#ifndef CLAPTRAP_HPP
+# define CLAPTRAP_HPP
 
 #include <string>
 
-class ScavTrap {
+class ClapTrap {
 
 public:
 
-	ScavTrap();
-	ScavTrap(std::string name);
-	ScavTrap(ScavTrap const & src);
-	~ScavTrap();
+	ClapTrap();
+	ClapTrap(std::string name);
+	ClapTrap(ClapTrap const & src);
+	~ClapTrap();
 
-	ScavTrap &	operator=(ScavTrap const & rhs);
+	ClapTrap &	operator=(ClapTrap const & rhs);
 
 	unsigned int	getHp();
 	unsigned int	getEnergy();
@@ -32,9 +32,8 @@ public:
 	void			meleeAttack(std::string const & target);
 	void			takeDamage(unsigned int amount);
 	void			beRepaired(unsigned int amount);
-	void			challengeNewcomer();
 
-private:
+protected:
 
 	unsigned int	_hp;
 	unsigned int	_maxHp;
@@ -45,6 +44,8 @@ private:
 	int				_melee;
 	int				_ranged;
 	int				_armor;
+
+private:
 
 };
 

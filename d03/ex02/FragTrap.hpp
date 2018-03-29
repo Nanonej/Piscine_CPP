@@ -1,50 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aridolfi <aridolfi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/03/29 13:15:56 by aridolfi          #+#    #+#             */
-/*   Updated: 2018/03/29 16:28:27 by aridolfi         ###   ########.fr       */
+/*   Created: 2018/03/29 09:49:07 by aridolfi          #+#    #+#             */
+/*   Updated: 2018/03/29 16:21:37 by aridolfi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-# define SCAVTRAP_HPP
+#ifndef FRAGTRAP_HPP
+# define FRAGTRAP_HPP
 
 #include <string>
+#include "ClapTrap.hpp"
 
-class ScavTrap {
+class FragTrap : public ClapTrap {
 
 public:
 
-	ScavTrap();
-	ScavTrap(std::string name);
-	ScavTrap(ScavTrap const & src);
-	~ScavTrap();
+	FragTrap();
+	FragTrap(std::string name);
+	FragTrap(FragTrap const & src);
+	~FragTrap();
 
-	ScavTrap &	operator=(ScavTrap const & rhs);
+	FragTrap &	operator=(FragTrap const & rhs);
 
-	unsigned int	getHp();
-	unsigned int	getEnergy();
 	void			rangedAttack(std::string const & target);
 	void			meleeAttack(std::string const & target);
-	void			takeDamage(unsigned int amount);
-	void			beRepaired(unsigned int amount);
-	void			challengeNewcomer();
+	void			vaulthunter_dot_exe(std::string const & target);
 
 private:
-
-	unsigned int	_hp;
-	unsigned int	_maxHp;
-	unsigned int	_energy;
-	unsigned int	_maxEnergy;
-	unsigned int	_lvl;
-	std::string		_name;
-	int				_melee;
-	int				_ranged;
-	int				_armor;
 
 };
 
