@@ -6,7 +6,7 @@
 /*   By: aridolfi <aridolfi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/29 10:05:31 by aridolfi          #+#    #+#             */
-/*   Updated: 2018/03/29 16:45:59 by aridolfi         ###   ########.fr       */
+/*   Updated: 2018/03/30 18:54:49 by aridolfi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name) {
 	std::cout << std::endl;
 }
 
-FragTrap::FragTrap(FragTrap const & src) {
+FragTrap::FragTrap(FragTrap const & src) : ClapTrap(src) {
 
 	std::cout << "Jack: " << src._name << " -- start bootup sequence." << std::endl;
 	std::cout << std::endl;

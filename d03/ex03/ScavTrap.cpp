@@ -6,7 +6,7 @@
 /*   By: aridolfi <aridolfi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/29 13:25:48 by aridolfi          #+#    #+#             */
-/*   Updated: 2018/03/29 16:42:35 by aridolfi         ###   ########.fr       */
+/*   Updated: 2018/03/30 18:55:26 by aridolfi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ ScavTrap::ScavTrap(std::string name) :	ClapTrap(name) {
 	this->_armor = 3;
 }
 
-ScavTrap::ScavTrap(ScavTrap const & src) {
+ScavTrap::ScavTrap(ScavTrap const & src) : ClapTrap(src) {
 
 	std::cout << src._name << " ready to serve!" << std::endl << std::endl;
 
