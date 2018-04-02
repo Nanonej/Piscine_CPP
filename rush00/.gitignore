@@ -1,0 +1,8 @@
+.DS_Store
+objs
+*.o
+*.gch
+a.out
+ft_retro
+test_*
+test
