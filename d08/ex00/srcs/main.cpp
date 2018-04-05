@@ -6,14 +6,14 @@
 /*   By: aridolfi <aridolfi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/05 09:52:44 by aridolfi          #+#    #+#             */
-/*   Updated: 2018/04/05 10:15:51 by aridolfi         ###   ########.fr       */
+/*   Updated: 2018/04/05 10:18:02 by aridolfi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <vector>
 #include <list>
-#include "easyfind.hpp"
+#include "easyfind.tpp"
 
 int	main() {
 
